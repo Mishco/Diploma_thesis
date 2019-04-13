@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<!--<script src="https://jsconsole.com/js/remote.js?FAE031CD-74A0-46D3-AE36-77777777"></script>-->
+
+	<title>javascript test mobile</title>
+	<meta name="viewport" content="width=device-width,user-scalable=yes">
+	<style>
+		body {
+			font-family: helvetica, arial, sans serif;
+		}
+
+		#sphere {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			-webkit-radius: 50px;
+			background-color: blue;
+		}
+
+		div.box {
+			width: 30em;
+			height: 3em;
+			background-color: #108040;
+		}
+
+		div.box.swipe {
+			background-color: #7ACEF4;
+		}
+				/*body {
+		  margin: 0;
+		  padding: 0;
+		  background: black;
+		  height: 100vh;
+		}*/
+
+		#thingy {
+		  position: absolute;
+		  top: 100px;
+		  left: 0px;
+		  width: 20px;
+		  height: 20px;
+		  background-color: orange;
+		  border-radius: 50%;
+		}
+
+		.smoke {
+		  z-index: -1;
+		}
+	</style>
+</head>
+
+<body>
+	<div data-role="page" id="index" onclick="showCoords(event)">
+		<div id="content">
+			 <button type="button" onClick="ulozLog()">SaveLog</button>
+			<h1>javascript test mobile</h1>
+			<div id="sphere" style="top: 0px; left: 0px;"></div>
+			<ul>
+				<li>acceleration x: <span id="accelerationX"></span>g</li>
+				<li>acceleration y: <span id="accelerationY"></span>g</li>
+				<li>acceleration z: <span id="accelerationZ"></span>g</li>
+				<li>rotation alpha: <span id="rotationAlpha"></span>d</li>
+				<li>rotation beta: <span id="rotationBeta"></span>d</li>
+				<li>rotation gamma: <span id="rotationGamma"></span>d</li>
+				<li>touch event: <span id="touchEvent"></span>S</li>
+				<li>coordinate: <span id="coordinate"></span></li>
+				<br>
+				<li>availHeight: <span id="availHeight"></span> </li>
+				<li>availWeight: <span id="availWeight"></span> </li>
+				<li>screenHeight: <span id="screenHeight"></span> </li>
+				<li>screenWeight: <span id="screenWeight"></span> </li>
+				<li>color depth: <span id="colorDepth"></span> </li>
+				<li>pixel depth: <span id="pixelDepth"></span> </li>
+				<br>
+				<li>mobile type: <span id="mobileType"></span> </li>
+			</ul>
+		</div>
+
+		<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+		<script src="clientjs-master/clientjs-master/dist/client.min.js"></script>
+		<script src="mobile-detect.js-master/mobile-detect.js"></script>
+		<!-- <script src="js/smoke.js"></script> -->
+  	<script src="js/javascript.js"></script>
+		<div id="thingy"></div>
+		<!-- <svg width="100" height="100">
+  		<circle cx="50" cy="50" r="10" stroke="green" stroke-width="4" fill="yellow" />
+		</svg> -->
+
+	</div>
+</body>
+</html>
